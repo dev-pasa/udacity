@@ -105,7 +105,7 @@ main_page_content = '''
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+            <a class="navbar-brand" href="#">Movie Trailers Website made by Huang Qiang</a> # Change title of website
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ def create_movie_tiles_content(movies):
 
 def open_movies_page(movies):
   # Create or overwrite the output file
-  output_file = open('fresh_tomatoes.html', 'w')
+  output_file = open('P1_Movie_Trailer_Website.html', 'w') # Change output file title
 
   # Replace the placeholder for the movie tiles with the actual dynamically generated content
   rendered_content = main_page_content.format(movie_tiles=create_movie_tiles_content(movies))
