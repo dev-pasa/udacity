@@ -1,5 +1,8 @@
 import fresh_tomatoes
 import media
+# You can replace the following instances with your favorite movie
+# movie_name = media.Movie("Name", "Storyline", "Poster URL (you can get from wikipiedia)", "movie trailier URL from youtube"
+
 
 toy_story = media.Movie("Toy Story", "A story of a boy and his toys that come to life", "http://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg", "https://www.youtube.com/watch?v=4KPTXpQehio")
 
@@ -14,5 +17,6 @@ the_lego_movie = media.Movie("The Lego Movie", "A 2014 computer animated adventu
 big_hero_6 = media.Movie("Big Hero 6", "a 2014 American 3D computer-animated superhero action comedy film", "http://upload.wikimedia.org/wikipedia/en/4/4b/Big_Hero_6_%28film%29_poster.jpg", "https://www.youtube.com/watch?v=z3biFxZIJOQ")
 
 movies = [toy_story, avatar, interstellar, transcendence, the_lego_movie, big_hero_6]
+# Once you finished updating with your own movie, do not forget to update the list
 
 fresh_tomatoes.open_movies_page(movies)

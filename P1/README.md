@@ -1,9 +1,13 @@
-READEME file includes details of all the steps required to successfully run the application.
+# Build a Movie Trailer Website with Python
 
-This is the first project of Full Stack Web Developer Nanodegree at Udacity.
+Use this server-side code to store a list of your favorite movies, including box art imagery and a movie trailer URL then generate a web page allowing visitors to review the movies and watch the trailers.
 
-It consists of 3 python files to run the project.
+## Quick Start
 
-1. "media.py" includes the class function to display the info of movies such as title, poster, storyline and youtube trailer.
-2.  "entertainment_center.py" includes the data info of those movies.
-3.  "fresh_tomatoes.py" is provided by Udacity to convert "media.py" and "entertainment_center.py" to a html file to display the final result of this project.
+- You need [python](http://www.python.org) installed on your computer. 
+- Download the [zip]() file and uncompress file in one folder.
+- Update entertainment_center.py with your own fav movie info then run it. 
+- A html file will be generated within the folder as a webpage for showing your favorite movies and movie trailiers.
+
+	
+	 
