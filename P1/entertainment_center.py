@@ -1,5 +1,5 @@
-import fresh_tomatoes
-import media
+import fresh_tomatoes # only work if fresh_tomatoes.py file in the same folder with media.py and entertainment_center.py
+import media # Use functions from media.py
 # You can replace the following instances with your favorite movie
 # movie_name = media.Movie("Name", "Storyline", "Poster URL (you can get from wikipiedia)", "movie trailier URL from youtube"
 
@@ -19,4 +19,4 @@ big_hero_6 = media.Movie("Big Hero 6", "a 2014 American 3D computer-animated sup
 movies = [toy_story, avatar, interstellar, transcendence, the_lego_movie, big_hero_6]
 # Once you finished updating with your own movie, do not forget to update the list
 
-fresh_tomatoes.open_movies_page(movies)
+fresh_tomatoes.open_movies_page(movies) # use fresh_tomatoes.py to call the function open_movie_page 
