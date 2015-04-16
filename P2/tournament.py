@@ -14,7 +14,9 @@ def connect():
 def registerPlayer(name):
     conn = connect()
     c = conn.cursor()
-    c.execute('INSERT INTO players (name) VALUES (%s)', (name,))
+    SQL = 'INSERT INTO players (name) VALUES (%s);'
+    data = (name,)
+    c.execute(SQL, data)
     conn.commit()
     conn.close()
 
@@ -45,7 +47,9 @@ def deleteMatches():
 def reportMatch(winner, loser):
     conn = connect()
     c = conn.cursor()
-    c.execute('INSERT INTO matches (p1, p2, winner) VALUES (%s, %s, %s)', (winner, loser, winner))
+    SQL = 'INSERT INTO matches (p1, p2, winner) VALUES (%s, %s, %s);'
+    data = (winner, loser, winner,)
+    c.execute(SQL, data)
     conn.commit()
     conn.close()
     
@@ -54,10 +58,7 @@ def playerStandings():
     c = conn.cursor()
     c.execute('SELECT * from playerSTANDINGS')
     result = c.fetchall()
-    a = []
-    for row in result:
-        a += [row]
-    return(a)
+    return [ row for row in result]
     conn.close()
     
 def swissPairings():
@@ -65,9 +66,6 @@ def swissPairings():
     c = conn.cursor()
     c.execute('SELECT a.id, a.name, b.id, b.name FROM playerSTANDINGS AS a, playerSTANDINGS AS b WHERE a.wins = b.wins and a.id > b.id')
     result = c.fetchall()
-    b = []
-    for row in result:
-        b += [row]
-    return(b)
+    return [ row for row in result]
     conn.close()
 
