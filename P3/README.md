@@ -1,4 +1,4 @@
-#My Favoriate Apps
+#My Favorite Apps
 **Project Description**This is a web application that provides a list of apps within a variety of categories and integrate third party user registration and authentication. Authenticated users could have the ability to post, edit, and delete their Favorite Apps.
 
 **To run this final project**
