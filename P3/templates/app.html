@@ -1,0 +1,39 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="row">
+    <div class="col-2 edge"></div>
+    <div class="col-2 category-bg">
+        <div class="category">
+        <h2>Category</h2>
+        {% for category in categories %}
+            <div class="category_list">
+                <a href="{{url_for('showCategory', category_name = category.name)}}">{{ category.name }}</a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="col-6 appdetail">
+    	<h2>{{app.name}}</h2>
+    	<p>By {{app.developer}}</p>
+		<p>Description: {{app.description}}</p>
+		<p>Category:<a href="{{url_for('showCategory', category_name = app.category.name)}}">{{app.category_name}}</a></p>
+		{% if app.os == "OS X" %}
+		<a href="{{app.url}}"><img src="/static/macappstore.svg"></a>
+		{% else %}
+		<a href="{{app.url}}"><img src="/static/appstore.svg"></a>
+		{% endif %}
+		</br>
+		<a href="{{url_for('editApp', app_name = app.name, category_name = app.category_name)}}">Edit</a>|<a href="{{url_for('deleteApp', app_name = app.name, category_name = app.category_name)}}">Delete</a>
+    </div>
+    <div class="col-2 edge"></div>
+</div>
+
+<div class="row none">
+            <div class="col-12">12</div>
+        </div>
+{% endblock %}
+
+
+

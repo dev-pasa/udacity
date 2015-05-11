@@ -1,0 +1,32 @@
+<div class="row header">
+    <div class="col-2 edge"></div>
+    <div class="col-4"><a href="/"><h1>My Favorite Apps</h1></a></div>
+    <div class="col-4 login">
+    {% if 'username' not in session %}
+    <a href="{{url_for('showLogin')}}">Login</a>
+    {% else %}
+    <a href="{{url_for('disconnect')}}">Logout</a>
+    {% endif%}
+    </div>
+    <div class="col-2 edge"></div>
+</div>
+<!--Flashing message-->
+<div class="row">
+    <div class="col-2 edge"></div>
+    <div class="col-8 flash">
+        <div class="none">Space</div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div></div>
+                    {% for message in messages %}
+                    <strong>{{message}}</strong>
+                    {% endfor %}    
+                
+            {% endif %}
+        {% endwith %}
+    </div>
+    <div class="col-2 edge"></div>
+</div>
+
+
+            
