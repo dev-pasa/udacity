@@ -202,7 +202,10 @@ class ConferenceApi(remote.Service):
         if not conf:
             raise endpoints.NotFoundException(
                 'No conference found with key: %s' % request.websafeConferenceKey)
-        
+        user_id = getUserId(user)
+        if user_id != conf.organizerUserId:
+            raise endpoints.UnauthorizedException('Only Organizer of Conference could add sessions')
+            
         return self._createSessionObject(request)
 
     @endpoints.method(CONF_GET_REQUEST, SessionForms,
