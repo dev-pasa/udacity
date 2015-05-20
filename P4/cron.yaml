@@ -1,0 +1,8 @@
+cron:
+- description: Repopulate the announcement every 1 hour
+  url: /crons/set_announcement
+  schedule: every 1 hours
+
+- description: Repopulate the featured speaker and sessions every 1 hour
+  url: /crons/crons/set_featured_speaker
+  schedule: every 1 hours
