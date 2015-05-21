@@ -158,3 +158,7 @@ class SessionQueryForms(messages.Message):
 class FeaturedMessage(messages.Message):
     """outbound string messages"""
     data = messages.StringField(1, required=True)
+
+class CountSessionsByConference(messages.Message):
+    """Number of sessions in a conference"""
+    num = messages.IntegerField(1)

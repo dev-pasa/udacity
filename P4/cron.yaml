@@ -4,5 +4,5 @@ cron:
   schedule: every 1 hours
 
 - description: Repopulate the featured speaker and sessions every 1 hour
-  url: /crons/crons/set_featured_speaker
+  url: /crons/set_featured_speaker
   schedule: every 1 hours

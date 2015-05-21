@@ -52,6 +52,12 @@ indexes:
 - kind: Conference
   properties:
   - name: city
+  - name: seatsAvailable
+    direction: desc
+
+- kind: Conference
+  properties:
+  - name: city
   - name: topics
   - name: name
 
